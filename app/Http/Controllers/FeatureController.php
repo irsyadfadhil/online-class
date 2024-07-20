@@ -9,8 +9,23 @@ class FeatureController extends Controller
 {
     public function index()
     {
-        $features = Feature::all();
-        return response()->json($features);
+        // $features = Feature::all();
+        // return response()->json($features);
+        return view('features/index');
+    }
+
+    public function create()
+    {
+        // $features = Feature::all();
+        // return response()->json($features);
+        return view('features/create');
+    }
+
+    public function edit($id)
+    {
+        // $features = Feature::all();
+        // return response()->json($features);
+        return view('features/edit');
     }
 
     public function store(Request $request)

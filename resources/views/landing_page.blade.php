@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - Online Class</title>
+  <title>Online Class</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -306,7 +306,7 @@
             <div class="pricing-slider">
                 <!-- Pricing Items -->
                 <div class="pricing-item">
-                    <h3>Free</h3>
+                    <h3>Free 1</h3>
                     <h4><sup>$</sup>0<span> / month</span></h4>
                     <ul>
                         <li>Aida dere</li>
@@ -320,7 +320,7 @@
                     </div>
                 </div><!-- End Pricing Item -->
                 <div class="pricing-item">
-                    <h3>Free</h3>
+                    <h3>Free 2</h3>
                     <h4><sup>$</sup>0<span> / month</span></h4>
                     <ul>
                         <li>Aida dere</li>
@@ -334,7 +334,7 @@
                     </div>
                 </div><!-- End Pricing Item -->
                 <div class="pricing-item">
-                    <h3>Free</h3>
+                    <h3>Free 3</h3>
                     <h4><sup>$</sup>0<span> / month</span></h4>
                     <ul>
                         <li>Aida dere</li>
@@ -348,7 +348,7 @@
                     </div>
                 </div><!-- End Pricing Item -->
                 <div class="pricing-item">
-                    <h3>Free</h3>
+                    <h3>Free 4</h3>
                     <h4><sup>$</sup>0<span> / month</span></h4>
                     <ul>
                         <li>Aida dere</li>
@@ -362,7 +362,7 @@
                     </div>
                 </div><!-- End Pricing Item -->
                 <div class="pricing-item">
-                    <h3>Free</h3>
+                    <h3>Free 5</h3>
                     <h4><sup>$</sup>0<span> / month</span></h4>
                     <ul>
                         <li>Aida dere</li>
@@ -376,7 +376,7 @@
                     </div>
                 </div><!-- End Pricing Item -->
                 <div class="pricing-item">
-                    <h3>Free</h3>
+                    <h3>Free 6</h3>
                     <h4><sup>$</sup>0<span> / month</span></h4>
                     <ul>
                         <li>Aida dere</li>

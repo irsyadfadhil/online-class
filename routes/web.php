@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('landing_page');
 });
 
+Route::get('/welcome', function () {
+    return view('landing_page');
+});
+
 Route::resource('class_plans', ClassPlanController::class);
 Route::resource('videos', VideoController::class);
 Route::resource('features', FeatureController::class);
