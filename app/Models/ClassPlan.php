@@ -19,6 +19,7 @@ class ClassPlan extends Model
      */
     protected $fillable = [
         'name',
+        'icon',
         'features',
         'max_users',
         'class_options',

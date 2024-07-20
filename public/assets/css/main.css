@@ -1708,6 +1708,13 @@ section,
   text-align: center;
 }
 
+.pricing .btn-wrap-second {
+    background: color-mix(in srgb, var(--default-color), transparent 100%);
+    margin: 0 -20px -20px -20px;
+    padding: 20px 15px;
+    text-align: center;
+  }
+
 .pricing .btn-buy {
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -1721,6 +1728,20 @@ section,
   font-weight: 600;
   transition: 0.3s;
 }
+
+.pricing .btn-buy-second {
+    background: var(--contrast-color);
+    color: var(--accent-color);
+    display: inline-block;
+    padding: 8px 35px 10px 35px;
+    border-radius: 4px;
+    transition: none;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    transition: 0.3s;
+  }
 
 .pricing .btn-buy:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);

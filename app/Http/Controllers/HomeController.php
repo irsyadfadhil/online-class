@@ -15,12 +15,6 @@ class HomeController extends Controller
         $class_plan = ClassPlan::get();
         $video = Video::get();
 
-        // $code_feature = Feature::pluck('code','name');
-        // $code_video = Video::pluck('code');
-// return [      "feature" => $feature,
-// "class_plan" => $class_plan,
-// "video" => $video
-// ];
         return view('landing_page')
         ->with([
             "feature" => $feature,

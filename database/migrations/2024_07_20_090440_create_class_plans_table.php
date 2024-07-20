@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('class_plans', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('icon');
             $table->text('features');
             $table->integer('max_users');
             $table->integer('class_options');

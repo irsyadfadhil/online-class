@@ -88,7 +88,7 @@
               <li><a href="#" class="btn-second">Masuk</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-          </nav>
+        </nav>
 
       </div>
 
@@ -262,92 +262,24 @@
         <div class="container">
             <!-- Slider -->
             <div class="pricing-slider">
+                @foreach ($class_plan as $item)
                 <!-- Pricing Items -->
                 <div class="pricing-item">
-                    <h3>Free 1</h3>
-                    <h4><sup>$</sup>0<span> / month</span></h4>
-                    <ul>
-                        <li>Aida dere</li>
-                        <li>Nec feugiat nisl</li>
-                        <li>Nulla at volutpat dola</li>
-                        <li class="na">Pharetra massa</li>
-                        <li class="na">Massa ultricies mi</li>
+                    <h3 style="text-align: left;"><i class="{{$item->icon}}"></i> {{$item->name}}</h3>
+                    <h5 style="text-align: left;"><span>Kelebihan</span></h5>
+                    <ul style="text-align: left;">
+                        @foreach (json_decode($item->features, true) as $feature)
+                            <li><i class="bi bi-check-circle-fill"></i> {{ $feature }}</li>
+                        @endforeach
                     </ul>
+                    <h5 style="text-align: left;">Rp{{number_format($item->price)}}</h5>
+                    <h4>Rp{{ number_format($item->promo_price) }}<span> / Bulan</span></h4>
                     <div class="btn-wrap">
-                        <a href="#" class="btn-buy">Buy Now</a>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="pricing-item">
-                    <h3>Free 2</h3>
-                    <h4><sup>$</sup>0<span> / month</span></h4>
-                    <ul>
-                        <li>Aida dere</li>
-                        <li>Nec feugiat nisl</li>
-                        <li>Nulla at volutpat dola</li>
-                        <li class="na">Pharetra massa</li>
-                        <li class="na">Massa ultricies mi</li>
-                    </ul>
-                    <div class="btn-wrap">
-                        <a href="#" class="btn-buy">Buy Now</a>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="pricing-item">
-                    <h3>Free 3</h3>
-                    <h4><sup>$</sup>0<span> / month</span></h4>
-                    <ul>
-                        <li>Aida dere</li>
-                        <li>Nec feugiat nisl</li>
-                        <li>Nulla at volutpat dola</li>
-                        <li class="na">Pharetra massa</li>
-                        <li class="na">Massa ultricies mi</li>
-                    </ul>
-                    <div class="btn-wrap">
-                        <a href="#" class="btn-buy">Buy Now</a>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="pricing-item">
-                    <h3>Free 4</h3>
-                    <h4><sup>$</sup>0<span> / month</span></h4>
-                    <ul>
-                        <li>Aida dere</li>
-                        <li>Nec feugiat nisl</li>
-                        <li>Nulla at volutpat dola</li>
-                        <li class="na">Pharetra massa</li>
-                        <li class="na">Massa ultricies mi</li>
-                    </ul>
-                    <div class="btn-wrap">
-                        <a href="#" class="btn-buy">Buy Now</a>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="pricing-item">
-                    <h3>Free 5</h3>
-                    <h4><sup>$</sup>0<span> / month</span></h4>
-                    <ul>
-                        <li>Aida dere</li>
-                        <li>Nec feugiat nisl</li>
-                        <li>Nulla at volutpat dola</li>
-                        <li class="na">Pharetra massa</li>
-                        <li class="na">Massa ultricies mi</li>
-                    </ul>
-                    <div class="btn-wrap">
-                        <a href="#" class="btn-buy">Buy Now</a>
-                    </div>
-                </div><!-- End Pricing Item -->
-                <div class="pricing-item">
-                    <h3>Free 6</h3>
-                    <h4><sup>$</sup>0<span> / month</span></h4>
-                    <ul>
-                        <li>Aida dere</li>
-                        <li>Nec feugiat nisl</li>
-                        <li>Nulla at volutpat dola</li>
-                        <li class="na">Pharetra massa</li>
-                        <li class="na">Massa ultricies mi</li>
-                    </ul>
-                    <div class="btn-wrap">
-                        <a href="#" class="btn-buy">Buy Now</a>
+                        <a href="#" class="btn-buy">Pilih Paket</a>
                     </div>
                 </div><!-- End Pricing Item -->
                 <!-- Duplicate this block for more items -->
+                @endforeach
             </div><!-- End Slider -->
         </div>
 
@@ -359,10 +291,22 @@
                     <div class="faq-container">
 
                     <div class="faq-item faq-active">
-                        <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                        <div class="faq-content">
-                        <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+                        <div class="row text-center">
+                            <div class="col-lg-4">
+                                <h3><i class="bi bi-buildings"></i> Enterprise</h3>
+                            </div>
+                            <div class="col-lg-4">
+                                <ul style="list-style-type: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                                    <li><i class="bi bi-check-circle-fill"></i> >100 users</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> All Access Class</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> More Features</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="#" class="btn-buy-second">Contact Us</a>
+                            </div>
                         </div>
+
                     </div><!-- End Faq item-->
 
                     </div>

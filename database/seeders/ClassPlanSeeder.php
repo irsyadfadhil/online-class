@@ -14,6 +14,7 @@ class ClassPlanSeeder extends Seeder
     {
         ClassPlan::create([
             'name' => 'Starter',
+            'icon' => 'bi bi-lightbulb',
             'features' => json_encode(['LMS + kelas by Kelas.Center', 'Up to 5 users', 'No charge per user', 'Up to 20 pilihan kelas', 'Update pergantian kelas / 3 bulan', 'Sertifikat', 'Konsultasi Gratis', 'Dedicated assistant', 'Full support 7x24 jam']),
             'max_users' => 5,
             'class_options' => 20,
@@ -23,6 +24,7 @@ class ClassPlanSeeder extends Seeder
 
         ClassPlan::create([
             'name' => 'Basic',
+            'icon' => 'bi bi-person',
             'features' => json_encode(['LMS + kelas by Kelas.Center', '6-49 users', 'No charge per user', 'Up to 50 pilihan kelas', 'Update pergantian kelas / 3 bulan', 'Sertifikat', 'Konsultasi Gratis', 'Dedicated assistant', 'Full support 7x24 jam']),
             'max_users' => 49,
             'class_options' => 50,
@@ -32,6 +34,7 @@ class ClassPlanSeeder extends Seeder
 
         ClassPlan::create([
             'name' => 'Pro',
+            'icon' => 'bi bi-people-fill',
             'features' => json_encode(['LMS + kelas by Kelas.Center', '50-100 users', 'No charge per user', 'All Access Class', 'Update pergantian kelas / 3 bulan', 'Sertifikat', 'Konsultasi Gratis', 'Dedicated assistant', 'Full support 7x24 jam']),
             'max_users' => 100,
             'class_options' => -1,  // Assuming -1 means all access
