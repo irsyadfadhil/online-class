@@ -18,11 +18,11 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #106eea; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #C19D6C; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,11 +30,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #222222;  /* The default color of the main navmenu links */
-  --nav-hover-color: #106eea; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #C19D6C; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #222222; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #106eea; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #C19D6C; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -248,6 +248,7 @@ h6 {
 
   .navmenu li {
     position: relative;
+    margin-right: 20px;
   }
 
   .navmenu a,
@@ -336,6 +337,47 @@ h6 {
     top: 0;
     left: -100%;
     visibility: visible;
+  }
+
+  .navmenu .btn-get-started {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 7px 7px;
+    border-radius: 4px;
+    transition: 0.5s;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu .btn-get-started:hover {
+    color: var(--contrast-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 15%);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu .btn-second {
+    color: var(--accent-color);
+    background: var(--contrast-color);
+    border-color: var(--accent-color);
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 7px 7px;
+    border-radius: 4px;
+    transition: 0.5s;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu .btn-second:hover {
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--contrast-color), transparent 15%);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -838,12 +880,12 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 75vh;
+  min-height: 90vh;
   position: relative;
   padding: 60px 0;
   display: flex;
   align-items: center;
-  background: url("../img/hero-bg.jpg") top left;
+  background: url("../img/hero-bg.png") top left;
   background-size: cover;
 }
 
@@ -1240,6 +1282,7 @@ section,
 
 .testimonials .testimonials-bg {
   position: absolute;
+  min-height: 20vh;
   inset: 0;
   display: block;
   width: 100%;
@@ -1247,6 +1290,26 @@ section,
   object-fit: cover;
   z-index: 1;
 }
+
+.testimonials .btn-get-started {
+    color: var(--contrast-color);
+    background: var(--accent-color);
+    font-family: var(--heading-font);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 7px 7px;
+    border-radius: 4px;
+    transition: 0.5s;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonials .btn-get-started:hover {
+    color: var(--contrast-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 15%);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  }
 
 .testimonials .container {
   position: relative;
@@ -1632,10 +1695,28 @@ section,
   padding: 1px 0 3px 0;
 }
 
+/* Slider Container */
+.pricing-slider {
+    margin: 0 -15px;
+}
+
+/* Pricing Items */
+.pricing-item {
+    margin: 0 15px;
+}
+
+/* Adjusted Button Wrap */
+.pricing .btn-wrap {
+    background: color-mix(in srgb, var(--default-color), transparent 95%);
+    margin: 0;
+    padding: 20px 15px;
+    text-align: center;
+}
+
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
-.faq .faq-container .faq-item {
+.pricing .faq-container .faq-item {
   background-color: var(--surface-color);
   position: relative;
   padding: 20px;
@@ -1645,11 +1726,11 @@ section,
   overflow: hidden;
 }
 
-.faq .faq-container .faq-item:last-child {
+.pricing .faq-container .faq-item:last-child {
   margin-bottom: 0;
 }
 
-.faq .faq-container .faq-item h3 {
+.pricing .faq-container .faq-item h3 {
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
@@ -1660,16 +1741,16 @@ section,
   align-items: center;
 }
 
-.faq .faq-container .faq-item h3 .num {
+.pricing .faq-container .faq-item h3 .num {
   color: var(--accent-color);
   padding-right: 5px;
 }
 
-.faq .faq-container .faq-item h3:hover {
+.pricing .faq-container .faq-item h3:hover {
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-item .faq-content {
+.pricing .faq-container .faq-item .faq-content {
   display: grid;
   grid-template-rows: 0fr;
   transition: 0.3s ease-in-out;
@@ -1677,12 +1758,12 @@ section,
   opacity: 0;
 }
 
-.faq .faq-container .faq-item .faq-content p {
+.pricing .faq-container .faq-item .faq-content p {
   margin-bottom: 0;
   overflow: hidden;
 }
 
-.faq .faq-container .faq-item .faq-toggle {
+.pricing .faq-container .faq-item .faq-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1692,28 +1773,28 @@ section,
   cursor: pointer;
 }
 
-.faq .faq-container .faq-item .faq-toggle:hover {
+.pricing .faq-container .faq-item .faq-toggle:hover {
   color: var(--accent-color);
 }
 
-.faq .faq-container .faq-active {
+.pricing .faq-container .faq-active {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   color: var(--contrast-color);
 }
 
-.faq .faq-container .faq-active h3 {
+.pricing .faq-container .faq-active h3 {
   color: var(--contrast-color);
 }
 
-.faq .faq-container .faq-active .faq-content {
+.pricing .faq-container .faq-active .faq-content {
   grid-template-rows: 1fr;
   visibility: visible;
   opacity: 1;
   padding-top: 10px;
 }
 
-.faq .faq-container .faq-active .faq-toggle {
+.pricing .faq-container .faq-active .faq-toggle {
   transform: rotate(90deg);
   color: var(--accent-color);
 }
