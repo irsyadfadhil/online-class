@@ -74,18 +74,18 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="#hero" class="active">Beranda</a></li>
-            <li><a href="#about">Benefit</a></li>
-            <li><a href="#services">Paket</a></li>
-            <li><a href="#portfolio">Kelas</a></li>
-            <li><a href="#team">Kontak Kami</a></li>
+            <li><a href="#benefit">Benefit</a></li>
+            <li><a href="#pricing">Paket</a></li>
+            <li><a href="#class">Kelas</a></li>
+            <li><a href="#footer">Kontak Kami</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
         <nav id="navmenu" class="navmenu">
             <ul>
-              <li><a href="#about" class="btn-get-started">Ajukan Demo</a></li>
-              <li><a href="#about" class="btn-second">Masuk</a></li>
+              <li><a href="#" class="btn-get-started">Ajukan Demo</a></li>
+              <li><a href="#" class="btn-second">Masuk</a></li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
@@ -107,7 +107,7 @@
             <h1>Tingkatkan Performa Bisnis Anda</h1>
             <p>Semua solusi untuk mempermudah Training dan Upskilling karyawan di perusahaan Anda</p>
                 <div class="d-flex">
-                    <a href="#about" class="btn-get-started">Ajukan Demo</a>
+                    <a href="#" class="btn-get-started">Ajukan Demo</a>
                 </div>
             </div>
         </div>
@@ -174,7 +174,7 @@
     </section><!-- /Clients Section -->
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <section id="benefit" class="portfolio section">
 
         <!-- Section Title -->
         <div class="container section-title">
@@ -418,7 +418,7 @@
     </section><!-- /Pricing Section -->
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <section id="class" class="portfolio section">
 
         <!-- Section Title -->
         <div class="container section-title">
@@ -570,7 +570,7 @@
                     <span>Kami ingin membantu dan menunjukkan kepada Anda bagaimana Kelas corp dapat membantu dalam mengelola pelatihan dan membuat prosesnya lebih cepat dan lebih mudah.</span>
                     <i class="bi bi-quote quote-icon-right"></i>
                     </p>
-                    <a href="#about" class="btn-get-started">Ajukan Demo</a>
+                    <a href="#" class="btn-get-started">Ajukan Demo</a>
                 </div>
                 </div><!-- End testimonial item -->
 
@@ -590,51 +590,42 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">BizLand</span>
+            <span class="sitename">Kelas.com</span>
+            {{-- <img src="{{ asset('assets/img/logo-putih.png') }}" class="img-fluid" alt=""> --}}
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>© 2021 Landify UI Kit. All rights reserved</p>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4>Company</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Ajukan Demo</a></li>
+            <li><a href="#">Kelas.Work</a></li>
+            <li><a href="#">Kelas.Com</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
+          <h4>Kebijakan</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><a href="#">Kebijakan Privasi</a></li>
+            <li><a href="#">Syarat & Ketentuan</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12">
           <h4>Follow Us</h4>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-          <div class="social-links d-flex">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
+          <p><i class="bi bi-envelope"></i> Nabilla.Anggraini@kelas.com</p>
+          <p><i class="bi bi-whatsapp"></i> +62 811 3366 763 (Nabilla Anggraini)</p>
         </div>
 
       </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
+    {{-- <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">BizLand</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
@@ -643,7 +634,7 @@
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
-    </div>
+    </div> --}}
 
   </footer>
 
