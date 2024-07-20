@@ -10,7 +10,9 @@ class VideoSeeder extends Seeder
     public function run()
     {
         Video::create([
-            'title' => 'Public Speaking: Merdeka Dalam Bicara',
+            'code' => 'CDV001',
+            'type' => 'Kelas.com',
+            'title' => 'Mengajarkan Personal Branding',
             'instructor' => 'Pandji Pragiwaksono',
             'instructor_title' => 'Presenter Televisi & Komika',
             'thumbnail_url' => '',
@@ -18,7 +20,9 @@ class VideoSeeder extends Seeder
         ]);
 
         Video::create([
-            'title' => 'Public Speaking: Merdeka Dalam Bicara',
+            'code' => 'CDV002',
+            'type' => 'kelas.work',
+            'title' => 'GUE BUKA KELAS PERSONAL BRANDING!',
             'instructor' => 'Pandji Pragiwaksono',
             'instructor_title' => 'Presenter Televisi & Komika',
             'thumbnail_url' => '',
@@ -26,16 +30,20 @@ class VideoSeeder extends Seeder
         ]);
 
         Video::create([
-            'title' => 'Public Speaking: Merdeka Dalam Bicara',
+            'code' => 'CDV003',
+            'type' => 'Bootcamp',
+            'title' => 'NGINTIP KELAS ONLINE PUBLIC SPEAKING PANDJI',
             'instructor' => 'Pandji Pragiwaksono',
             'instructor_title' => 'Presenter Televisi & Komika',
-            'thumbnail_url' => 'path/to/thumbnail3.jpg',
+            'thumbnail_url' => '',
             'video_url' => 'https://www.youtube.com/watch?v=hcr-8e931k4',
         ]);
 
         Video::create([
-            'title' => 'Public Speaking: Merdeka Dalam Bicara',
-            'instructor' => 'Pandji Pragiwaksono',
+            'code' => 'CDV001',
+            'type' => 'kelas.com',
+            'title' => 'Mengajarkan Penulisan Skenario',
+            'instructor' => 'Ernest Prakasa',
             'instructor_title' => 'Presenter Televisi & Komika',
             'thumbnail_url' => '',
             'video_url' => 'https://www.youtube.com/watch?v=gyUUl_HrOLc',

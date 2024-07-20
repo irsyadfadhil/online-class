@@ -22,7 +22,8 @@ class ClassPlan extends Model
         'features',
         'max_users',
         'class_options',
-        'price'
+        'price',
+        'promo_price'
     ];
 
 }

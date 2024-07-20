@@ -185,49 +185,52 @@
 
         <div class="container">
 
-            <div class="isotope-layout" data-default-filter=".filter-app" data-layout="masonry" data-sort="original-order">
+            <div class="isotope-layout" data-default-filter=".filter-{{$feature[0]->code }}" data-layout="masonry" data-sort="original-order">
+
 
                 <ul class="portfolio-filters isotope-filters">
-                    {{-- <li data-filter="" class="filter-active"></li> --}}
-                    <li data-filter=".filter-app" class="filter-active">App</li>
-                    <li data-filter=".filter-product">Card</li>
+                    @foreach ($feature as $item)
+                        @if ($loop->first)
+                            <li data-filter=".filter-{{$item->code}}" class="filter-active">{{$item->name}}</li>
+                        @else
+                            <li data-filter=".filter-{{$item->code}}">{{$item->name}}</li>
+                        @endif
+                    @endforeach
                 </ul><!-- End Portfolio Filters -->
 
                 <div class="row gy-4 isotope-container">
 
-                    <div class="col-lg-12 col-md-6 portfolio-item isotope-item filter-app">
+                    @foreach ($feature as $item)
+                    <div class="col-lg-12 col-md-6 portfolio-item isotope-item filter-{{$item->code}}">
                         <div class="container">
-
                             <div class="row gy-3">
 
                                 <div class="col-lg-6 d-flex flex-column justify-content-center">
                                     <div class="about-content ps-0 ps-lg-3">
-                                    <h3>Tes</h3>
+                                    <h3>{{$item->title}}</h3>
                                     <p class="fst-italic">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                        magna aliqua.
+                                        {{$item->description}}
                                     </p>
                                     <ul>
                                         <li>
-                                        <i class="bi bi-diagram-3"></i>
                                         <div>
-                                            <h4>Ullamco laboris nisi ut aliquip consequat</h4>
-                                            <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+                                            <h4>{{$item->sub_title1}}</h4>
+                                            <p>{{$item->sub_description1}}</p>
                                         </div>
                                         </li>
                                         <li>
-                                        <i class="bi bi-fullscreen-exit"></i>
                                         <div>
-                                            <h4>Magnam soluta odio exercitationem reprehenderi</h4>
-                                            <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+                                            <h4>{{$item->sub_title2}}</h4>
+                                            <p>{{$item->sub_description2}}</p>
+                                        </div>
+                                        </li>
+                                        <li>
+                                        <div>
+                                            <h4>{{$item->sub_title3}}</h4>
+                                            <p>{{$item->sub_description3}}</p>
                                         </div>
                                         </li>
                                     </ul>
-                                    <p>
-                                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum
-                                    </p>
                                     </div>
 
                                 </div>
@@ -236,54 +239,9 @@
                                     <img src="assets/img/about.jpg" alt="" class="img-fluid">
                                 </div>
                             </div>
-
                         </div>
                     </div><!-- End Portfolio Item -->
-
-                    <div class="col-lg-12 col-md-6 portfolio-item isotope-item filter-product">
-                        <div class="container">
-
-                            <div class="row gy-3">
-
-                                <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                    <div class="about-content ps-0 ps-lg-3">
-                                    <h3>Tes</h3>
-                                    <p class="fst-italic">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                        magna aliqua.
-                                    </p>
-                                    <ul>
-                                        <li>
-                                        <i class="bi bi-diagram-3"></i>
-                                        <div>
-                                            <h4>Ullamco laboris nisi ut aliquip consequat</h4>
-                                            <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
-                                        </div>
-                                        </li>
-                                        <li>
-                                        <i class="bi bi-fullscreen-exit"></i>
-                                        <div>
-                                            <h4>Magnam soluta odio exercitationem reprehenderi</h4>
-                                            <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
-                                        </div>
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum
-                                    </p>
-                                    </div>
-
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <img src="assets/img/about.jpg" alt="" class="img-fluid">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div><!-- End Portfolio Item -->
+                    @endforeach
 
                 </div><!-- End Portfolio Container -->
 
@@ -429,107 +387,48 @@
 
         <div class="container">
 
-            <div class="isotope-layout" data-default-filter=".filter-app" data-layout="masonry" data-sort="original-order">
+            <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
                 <ul class="portfolio-filters isotope-filters">
-                    {{-- <li data-filter="" class="filter-active"></li> --}}
-                    <li data-filter=".filter-app" class="filter-active">App</li>
-                    <li data-filter=".filter-product">Card</li>
+                    @php
+                        $uniqueVideos = $video->unique('code');
+                    @endphp
+
+                    @foreach ($uniqueVideos as $item)
+                        @if ($loop->first)
+                            <li data-filter=".filter-{{$item->code}}" class="filter-active">{{$item->type}}</li>
+                        @else
+                            <li data-filter=".filter-{{$item->code}}">{{$item->type}}</li>
+                        @endif
+                    @endforeach
                 </ul><!-- End Portfolio Filters -->
 
                 <div class="row gy-4 isotope-container">
-
-                    <div class="col-lg-12 col-md-6 portfolio-item isotope-item filter-app">
-                        <div class="container">
-
-                            <div class="row gy-3">
-
-                                <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                    <div class="about-content ps-0 ps-lg-3">
-                                    <h3>Tes</h3>
-                                    <p class="fst-italic">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                        magna aliqua.
-                                    </p>
-                                    <ul>
-                                        <li>
-                                        <i class="bi bi-diagram-3"></i>
-                                        <div>
-                                            <h4>Ullamco laboris nisi ut aliquip consequat</h4>
-                                            <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
-                                        </div>
-                                        </li>
-                                        <li>
-                                        <i class="bi bi-fullscreen-exit"></i>
-                                        <div>
-                                            <h4>Magnam soluta odio exercitationem reprehenderi</h4>
-                                            <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
-                                        </div>
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum
-                                    </p>
-                                    </div>
-
+                    @foreach ($video as $item)
+                    @php
+                        parse_str(parse_url($item->video_url, PHP_URL_QUERY), $params);
+                        $videoId = $params['v'] ?? '';
+                        $thumbnailUrl = $videoId ? "https://img.youtube.com/vi/{$videoId}/default.jpg" : '';
+                    @endphp
+                        <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-{{$item->code}}">
+                            <div class="service-item position-relative">
+                                <div class="icon">
+                                    @if ($thumbnailUrl)
+                                        <img src="{{$thumbnailUrl}}" alt="Thumbnail" style="width: 100%; height: auto;">
+                                    @else
+                                        <p>No Thumbnail</p>
+                                    @endif
                                 </div>
-
-                                <div class="col-lg-6">
-                                    <img src="assets/img/about.jpg" alt="" class="img-fluid">
-                                </div>
+                                <a href="{{$item->video_url}}" class="stretched-link" style="text-align: left; display: block;">
+                                    <h4 style="text-align: left;">{{$item->title}}</h4>
+                                    <h5 style="text-align: left;">{{$item->instructor}}</h5>
+                                </a>
+                                <p style="text-align: left;">{{$item->instructor_title}}</p>
                             </div>
-
-                        </div>
-                    </div><!-- End Portfolio Item -->
-
-                    <div class="col-lg-12 col-md-6 portfolio-item isotope-item filter-product">
-                        <div class="container">
-
-                            <div class="row gy-3">
-
-                                <div class="col-lg-6 d-flex flex-column justify-content-center">
-                                    <div class="about-content ps-0 ps-lg-3">
-                                    <h3>Tes</h3>
-                                    <p class="fst-italic">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                        magna aliqua.
-                                    </p>
-                                    <ul>
-                                        <li>
-                                        <i class="bi bi-diagram-3"></i>
-                                        <div>
-                                            <h4>Ullamco laboris nisi ut aliquip consequat</h4>
-                                            <p>Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
-                                        </div>
-                                        </li>
-                                        <li>
-                                        <i class="bi bi-fullscreen-exit"></i>
-                                        <div>
-                                            <h4>Magnam soluta odio exercitationem reprehenderi</h4>
-                                            <p>Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
-                                        </div>
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                        culpa qui officia deserunt mollit anim id est laborum
-                                    </p>
-                                    </div>
-
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <img src="assets/img/about.jpg" alt="" class="img-fluid">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div><!-- End Portfolio Item -->
-
+                        </div><!-- End Service Item -->
+                    @endforeach
                 </div><!-- End Portfolio Container -->
+
 
             </div>
 

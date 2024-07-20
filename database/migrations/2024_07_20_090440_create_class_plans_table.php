@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('max_users');
             $table->integer('class_options');
             $table->decimal('price', 10, 2);
+            $table->decimal('promo_price', 10, 2);
             $table->timestamps();
             $table->softDeletes();
         });

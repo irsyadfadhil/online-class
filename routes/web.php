@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClassPlanController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,14 +17,15 @@ use App\Http\Controllers\FeatureController;
 |
 */
 
-Route::get('/', function () {
-    return view('landing_page');
-});
+// Route::get('/tes', function () {
+//     return view('landing_page');
+// });
 
-Route::get('/welcome', function () {
-    return view('landing_page');
-});
+// Route::get('/welcome', function () {
+//     return view('landing_page');
+// });
 
+Route::resource('/', HomeController::class);
 Route::resource('class_plans', ClassPlanController::class);
 Route::resource('videos', VideoController::class);
 Route::resource('features', FeatureController::class);

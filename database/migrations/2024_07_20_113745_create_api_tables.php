@@ -14,7 +14,7 @@ return new class extends Migration
         // Migration for subscriptions table
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
+            $table->integer('user_id');
             $table->decimal('amount', 10, 2);
             $table->timestamps();
             $table->softDeletes();
@@ -31,7 +31,7 @@ return new class extends Migration
         // Migration for classes table
         Schema::create('classes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('mentor_id')->constrained();
+            $table->integer('mentor_id');
             $table->string('name');
             $table->timestamps();
             $table->softDeletes();
@@ -40,8 +40,8 @@ return new class extends Migration
         // Migration for watch_times table
         Schema::create('watch_times', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('class_id')->constrained();
+            $table->integer('user_id');
+            $table->integer('class_id');
             $table->integer('minutes');
             $table->timestamps();
             $table->softDeletes();

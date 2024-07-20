@@ -18,15 +18,16 @@ class Feature extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'code',
         'name',
         'title',
-         'description',
-          'sub_title1',
-          'sub_description1',
-          'sub_title2',
-          'sub_description2',
-          'sub_title3',
-          'sub_description3'
+        'description',
+        'sub_title1',
+        'sub_description1',
+        'sub_title2',
+        'sub_description2',
+        'sub_title3',
+        'sub_description3'
 
     ];
 }

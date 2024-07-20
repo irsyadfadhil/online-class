@@ -6,8 +6,10 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use App\Models\Mentor;
-use App\Models\ClassModel;
+use App\Models\Classes;
 use App\Models\WatchTime;
+use App\Models\Subscription;
+
 
 class ApiSeeder extends Seeder
 {
@@ -35,6 +37,15 @@ class ApiSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => 'Ymir',
+                'email' => 'ymir@example.com',
+                'email_verified_at' => now(),
+                'password' => Hash::make('password321'),
+                'remember_token' => null,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
         // Tambahkan data untuk Mentor
         $mentors = [
@@ -46,7 +57,7 @@ class ApiSeeder extends Seeder
             Mentor::create($mentor);
         }
 
-        // Tambahkan data untuk ClassModel
+        // Tambahkan data untuk Classes
         $classes = [
             ['mentor_id' => 1, 'name' => 'Kelas Laravel'],
             ['mentor_id' => 1, 'name' => 'Kelas Golang'],
@@ -56,7 +67,7 @@ class ApiSeeder extends Seeder
         ];
 
         foreach ($classes as $class) {
-            ClassModel::create($class);
+            Classes::create($class);
         }
 
         // Tambahkan data untuk WatchTime
@@ -70,6 +81,17 @@ class ApiSeeder extends Seeder
 
         foreach ($watchTimes as $watchTime) {
             WatchTime::create($watchTime);
+        }
+
+           // Tambahkan data untuk Subscriptions
+           $subscriptions = [
+            ['user_id' => 1, 'amount' => 69000],
+            ['user_id' => 2, 'amount' => 69000],
+            ['user_id' => 3, 'amount' => 69000],
+        ];
+
+        foreach ($subscriptions as $subscription) {
+            Subscription::create($subscription);
         }
     }
 }
