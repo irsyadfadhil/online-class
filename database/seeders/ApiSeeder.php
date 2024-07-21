@@ -75,8 +75,9 @@ class ApiSeeder extends Seeder
             ['user_id' => 1, 'class_id' => 1, 'minutes' => 20],
             ['user_id' => 1, 'class_id' => 2, 'minutes' => 50],
             ['user_id' => 2, 'class_id' => 3, 'minutes' => 30],
-            ['user_id' => 2, 'class_id' => 4, 'minutes' => 40],
-            ['user_id' => 3, 'class_id' => 5, 'minutes' => 60],
+            ['user_id' => 2, 'class_id' => 3, 'minutes' => 40],
+            ['user_id' => 3, 'class_id' => 4, 'minutes' => 60],
+            ['user_id' => 1, 'class_id' => 5, 'minutes' => 60],
         ];
 
         foreach ($watchTimes as $watchTime) {
@@ -85,7 +86,7 @@ class ApiSeeder extends Seeder
 
            // Tambahkan data untuk Subscriptions
            $subscriptions = [
-            ['user_id' => 1, 'amount' => 159000],
+            ['user_id' => 1, 'amount' => 69000],
             ['user_id' => 2, 'amount' => 159000],
             ['user_id' => 3, 'amount' => 2900000],
         ];
