@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\WatchTime;
 use Illuminate\Http\Request;
 
 class WatchTimeController extends Controller
