@@ -1,22 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Repositories;
 
 use App\Models\WatchTime;
 use App\Models\Subscription;
-use Illuminate\Support\Facades\DB;
 use App\Repositories\ProfitSharingRepositoryInterface;
+use Illuminate\Support\Facades\DB;
 
-class ProfitSharingController extends Controller
+class ProfitSharingRepository implements ProfitSharingRepositoryInterface
 {
-    // private $profitSharingRepository;
-
-    // public function __construct(
-    //     ProfitSharingRepositoryInterface $profitSharingRepo,
-    // ) {
-    //     $this->profitSharingRepository = $profitSharingRepo;
-    // }
-
     public function calculate()
     {
         $subscriptions = Subscription::all();
@@ -76,9 +68,6 @@ class ProfitSharingController extends Controller
             ];
         }
 
-        // $shares = $this->profitSharingRepository->calculate();
-
-        return response()->json($shares);
+        return $shares;
     }
-
 }

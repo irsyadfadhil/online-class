@@ -85,9 +85,9 @@ class ApiSeeder extends Seeder
 
            // Tambahkan data untuk Subscriptions
            $subscriptions = [
-            ['user_id' => 1, 'amount' => 69000],
-            ['user_id' => 2, 'amount' => 69000],
-            ['user_id' => 3, 'amount' => 69000],
+            ['user_id' => 1, 'amount' => 159000],
+            ['user_id' => 2, 'amount' => 159000],
+            ['user_id' => 3, 'amount' => 2900000],
         ];
 
         foreach ($subscriptions as $subscription) {

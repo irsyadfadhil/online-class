@@ -3,7 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-
+use App\Repositories\ProfitSharingRepository;
+use App\Repositories\ProfitSharingRepositoryInterface;
 class RepositoryServiceProvider extends ServiceProvider
 {
     /**
@@ -19,6 +20,6 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->app->bind(ProfitSharingRepositoryInterface::class, ProfitSharingRepository::class);
     }
 }

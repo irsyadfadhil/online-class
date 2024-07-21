@@ -272,8 +272,8 @@
                             <li><i class="bi bi-check-circle-fill"></i> {{ $feature }}</li>
                         @endforeach
                     </ul>
-                    <h5 style="text-align: left;">Rp{{number_format($item->price)}}</h5>
-                    <h4>Rp{{ number_format($item->promo_price) }}<span> / Bulan</span></h4>
+                    <h5 style="text-align: left;">Rp{{ str_replace(',', '.', number_format($item->price)) }}</h5>
+                    <h4>Rp{{ str_replace(',', '.', number_format($item->promo_price)) }}<span> / Bulan</span></h4>
                     <div class="btn-wrap">
                         <a href="#" class="btn-buy">Pilih Paket</a>
                     </div>
@@ -293,7 +293,7 @@
                     <div class="faq-item faq-active">
                         <div class="row text-center">
                             <div class="col-lg-4">
-                                <h3><i class="bi bi-buildings"></i> Enterprise</h3>
+                                <h4 style="color: white;"><i class="bi bi-buildings"></i> Enterprise</h4>
                             </div>
                             <div class="col-lg-4">
                                 <ul style="list-style-type: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
